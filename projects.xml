@@ -84,4 +84,14 @@ lol</desc>
         <ghub shown="yes">https://github.com/YourFurryDeveloper/Infinite-Library/</ghub>
         <site shown="yes">https://yourfurrydeveloper.github.io/Infinite-Library/</site>
     </project>
+
+    <project>
+        <img>/img/projects/tubermash.png</img>
+        <name>TuberMash</name>
+        <urlname>tubermash</urlname>
+        <descshort>Like FaceMash, but with YouTubers!</descshort>
+        <desc>I LOVE The Social Network, so I decided to create FaceMash, but with YouTubers. TuberMash does not require any connection to YouTube API, since you run the Python script to get the channels and their PFPs! I'm SUPER proud of this, and it's pretty cool! :3</desc>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/TuberMash</ghub>
+        <site shown="yes">https://tubermash.puter.com</site>
+    </project>
 </projects>
