@@ -94,4 +94,14 @@ lol</desc>
         <ghub shown="yes">https://github.com/YourFurryDeveloper/TuberMash</ghub>
         <site shown="yes">https://tubermash.puter.com</site>
     </project>
+
+    <project>
+        <img>/img/projects/ninjatimer.png</img>
+        <name>McTech Ninja Timing System</name>
+        <urlname>mtns</urlname>
+        <descshort>A cool recreation of the ninja timing and leaderboard system I made just for fun in 2 days while at Worlds!</descshort>
+        <desc>I was a bit too nervous to compete in any ninja comps this season, so I wasn't able to compete in Worlds. What started off as me just recreating the leaderboard part almost 1:1 because I was dissatisfied and angry that the run order weren't scrolling at the same time spiraled into me literally RECREATING the timing system that they use! I feel like this is my BIGGEST project YET, and I am SOOOO proud of it!!! :3</desc>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/McTech-Ninja-Timing-System</ghub>
+        <site shown="no"></site>
+    </project>
 </projects>
