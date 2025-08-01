@@ -28,6 +28,13 @@ html::-webkit-scrollbar-thumb {
     border: 5px outset rgb(119, 119, 119);
 }
 
+#bmc-wbtn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    transform: scale(80%);
+}
+
 #bootscreen {
     font-size: 25px;
     color: rgb(130, 130, 130);
