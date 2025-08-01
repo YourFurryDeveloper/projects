@@ -18,6 +18,13 @@ html {
     background-color: black;
 }
 
+#bmc-wbtn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    transform: scale(80%);
+}
+
 #topbar {
     position: fixed;
     display: flex;
