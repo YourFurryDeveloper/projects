@@ -125,6 +125,7 @@ html::-webkit-scrollbar-thumb {
     cursor: pointer;
     box-shadow: 10px 10px 0px 4px rgba(99,99,99,0.57);
     /*flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
+    
     flex: 1;
     min-width: 200px;
 }
