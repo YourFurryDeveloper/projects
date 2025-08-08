@@ -109,13 +109,13 @@ html::-webkit-scrollbar-thumb {
 
 #projholder, #mainprojholder {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 #projbtn {
     margin-top: 25px;
-    size-adjust: initial;
+    /*size-adjust: initial;*/
     width: 300px;
     height: 300px;
     /*flex: 1 1 300px;*/
@@ -124,7 +124,8 @@ html::-webkit-scrollbar-thumb {
     transition: 0.2s;
     cursor: pointer;
     box-shadow: 10px 10px 0px 4px rgba(99,99,99,0.57);
-    flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
+    /*flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
+    flex: 1;
     min-width: 200px;
 }
 
