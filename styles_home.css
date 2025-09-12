@@ -54,6 +54,7 @@ html::-webkit-scrollbar-thumb {
 /* MAIN SITE */
 
 #topbar {
+    z-index: 1000;
     position: fixed;
     display: flex;
     align-items: center;
