@@ -106,7 +106,7 @@ lol</desc>
     </project>
 
     <project>
-        <img>https://github-readme-stats.vercel.app/api/pin/?username=YourFurryDeveloper&repo=EasyToolbar.JS&theme=dark</img>
+        <img>/img/projects/EasyToolbar.js.svg</img>
         <name>EasyToolbar.js</name>
         <urlname>etbjs</urlname>
         <descshort>A Javascript library for HTML editor webapps or whatever you want!</descshort>
