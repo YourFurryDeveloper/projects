@@ -111,7 +111,7 @@ lol</desc>
         <urlname>etbjs</urlname>
         <descshort>A Javascript library for HTML editor webapps or whatever you want!</descshort>
         <desc>EasyToolbar.js is a Javascript library for HTML editor webapps like paint apps or something, or just for whatever! It allows you to easily create a customizable toolbar, saving you LOTS of time trying to make your own.</desc>
-        <ghub shown="yes">https://github.com/YourFurryDeveloper/EasyToolbar.JS/ghub>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/EasyToolbar.JS</ghub>
         <site shown="no"></site>
     </project>
 </projects>
