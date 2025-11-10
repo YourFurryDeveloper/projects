@@ -114,4 +114,14 @@ lol</desc>
         <ghub shown="yes">https://github.com/YourFurryDeveloper/EasyToolbarJs</ghub>
         <site shown="no"></site>
     </project>
+
+    <project>
+        <img>/img/projects/3d-png-renderer.png</img>
+        <name>3D PNG Renderer</name>
+        <urlname>3dpngr</urlname>
+        <descshort>A really, really cool PNG/GIF/any image 3D renderer! </descshort>
+        <desc>I've always had an idea nagging at the back of my head that I could very easily create a 3D image renderer where you can input an image and it'll layer it to make it 3D. I knew that images with transparent backgrounds would look REALLY cool and 3D! You can input ANY image in ANY format!</desc>
+        <ghub shown="yes">https://github.com/YourFurryDeveloper/3D-PNG-Renderer</ghub>
+        <site shown="yes">https://yourfurrydeveloper.github.io/3D-PNG-Renderer</site>
+    </project>
 </projects>
