@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>McTechDev</title>
+        <link rel="stylesheet" href="styles_bloghome.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d4e686b128ae4317bf74e6d1d93e463a"}'></script><!-- End Cloudflare Web Analytics -->
+    </head>
+
+    <body onload="loadPosts()">
+        <div id="maincontent">
+            <div id="topbar">
+                <p id="sitename">McTechDev</p>
+                <nav id="topnav">
+                    <a href="index.html?b=no"><button id="navbtn">[Home]</button></a>
+                    <a href="/blog.html"><button id="navbtn">[Blog]</button></a>
+                    <a href="/old/index_old.html"><button id="navbtn">[Old Site]</button></a>
+                </nav>
+            </div>
+
+            <div id="mainprojcontainer" style="margin-top: 70px;">
+                <h1 id="containertitle">My Blog Posts</h1>
+                <hr style="border-color: red;">
+                <div id="mainprojholder"></div>
+            </div>
+        </div>
+
+        <!--<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="mctechdev" data-description="Support me on Buy me a coffee!" data-message="Hey, could you maybe support me? :3" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>-->
+
+        <script>
+            function loadPosts() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const pname = urlParams.get("p");
+
+                const xmlUrl = '/posts.xml';
+
+                fetch(xmlUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(xmlString => {
+                    parseXML(xmlString);
+                })
+                .catch(error => {
+                    console.error('There was a problem fetching the XML file:', error);
+                    alert('There was a problem fetching the post data:', error);
+                });
+
+                function parseXML(xmlString) {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xmlString, 'application/xml');
+
+                    const parsedposts = [];
+
+                    const projectNodes = xmlDoc.getElementsByTagName('post');
+
+                    for (let i = 0; i < projectNodes.length; i++) {
+                        const post = projectNodes[i];
+                        const title = post.getElementsByTagName('title')[0].textContent;
+                        const date = post.getElementsByTagName('date')[0].textContent;
+                        const img = post.getElementsByTagName('img')[0].textContent;
+
+                        addProjectBtn([ title, date, i, img ]);
+                    }
+                }
+            }
+
+            function addProjectBtn(projectItems) {
+                const btnName = projectItems[0];
+                const btnDate = projectItems[1];
+                const btnLink = projectItems[2];
+                const btnImg = projectItems[3];
+
+                const link = document.createElement('a');
+                link.href = `/post.html?p=${btnLink}`;
+                link.id = "postLink";
+
+                const btn = document.createElement('div');
+                btn.id = 'projbtn';
+                btn.style = `
+                    background-image: url('${btnImg}');
+                    background-size: cover;
+                    background-position: center;
+                `;
+
+                const caption = document.createElement('p');
+                caption.id = 'projcaption';
+                caption.textContent = btnName;
+
+                const dateCaption = document.createElement('p');
+                dateCaption.id = 'projdate';
+                dateCaption.textContent = btnDate;
+
+                link.appendChild(btn);
+
+                if (btnLink === 0) {
+                    btn.style.width = "100%";
+                    btn.style.height = "100%";
+                    btn.style.aspectRatio = "16/9";
+                    link.className = "latestPost";
+                }
+
+                link.appendChild(caption);
+                link.appendChild(dateCaption);
+
+                const container = document.getElementById('mainprojholder');
+                if (container) {
+                    container.appendChild(link);
+                } else {
+                    console.error('Container with ID "projects" not found.');
+                }
+            }
+        </script>
+    </body>
+</html>

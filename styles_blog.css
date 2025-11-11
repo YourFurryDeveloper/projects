@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "ibmbios";
+    src: url('fonts/mainfont.ttf');
+}
+
+@font-face {
+    font-family: "mainfont2";
+    src: url('fonts/Ac437_Acer_VGA_8x8.ttf');
+}
+
+html {
+    font-family: "ibmbios";
+    /*background-color: rgb(30, 30, 30);*/
+    background-color: black;
+}
+
+html::-webkit-scrollbar {
+    width: 17px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #7c7c7c;
+    border: 1px solid #cacaca;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #adadad;
+    border: 5px outset rgb(119, 119, 119);
+}
+
+#bmc-wbtn {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    transform: scale(80%);
+}
+
+/* MAIN SITE */
+
+#topbar {
+    z-index: 900;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: rgb(45, 45, 45);
+}
+
+#sitename {
+    font-size: 25px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#topnav {
+    display: flex;
+    justify-content: center;
+}
+
+#navbtn {
+    font-family: "ibmbios";
+    font-size: 15px;
+    color: rgb(230, 178, 74);
+    width: fit-content;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 15px;
+}
+
+#navbtn:hover {
+    color: white;
+    background-color: rgb(230, 178, 74);
+}
+
+#projcontainer, #mainprojcontainer {
+    position: absolute;   
+    left: 20px;  
+    right: 20px;
+    height: fit-content;
+    /*margin-left: 20px;*/
+}
+
+#projholder, #mainprojholder {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#projbtn {
+    margin-top: 25px;
+    /*size-adjust: initial;*/
+    width: 300px;
+    height: 300px;
+    /*flex: 1 1 300px;*/
+    /*width: calc(100vw / 6);*/
+    /*height: calc(100vw / 6);*/
+    transition: 0.2s;
+    cursor: pointer;
+    box-shadow: 10px 10px 0px 4px rgba(99,99,99,0.57);
+    /*flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
+    
+    flex: 1;
+    min-width: 200px;
+}
+
+#projbtn:hover {
+    box-shadow: 10px 10px 0px 4px rgba(109, 152, 159, 0.57);
+    transform: scale(101%);
+}
+
+#projcaption {
+    text-align: center;
+    background-color: rgb(234, 92, 45);
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+#topinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#postLinks {
+    margin-left: auto;
+}
+
+#ghubbtn, #sitebtn {
+    font-family: "ibmbios";
+    font-size: 15px;
+    color: rgb(230, 178, 74);
+    width: fit-content;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 15px;
+    box-shadow: 4px 4px 0px 1px rgba(99,99,99,0.57);
+}
+
+#ghubbtn:hover, #sitebtn:hover {
+    color: white;
+    background-color: rgb(230, 178, 74);
+    box-shadow: 4px 4px 0px 1px rgba(114, 161, 177, 0.57);
+}
+
+#posttitle {
+    font-family: mainfont2;
+    color: rgb(187, 128, 1);
+    font-size: 23px;
+    overflow-wrap: anywhere !important;
+    overflow: scroll;
+}
+
+#postdate {
+    color: rgb(108, 74, 0);
+    font-family: mainfont2;
+    font-size: 15px;
+}
+
+#postContent {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}

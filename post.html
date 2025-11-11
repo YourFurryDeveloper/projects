@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>McTechDev</title>
+        <link rel="stylesheet" href="styles_blog.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d4e686b128ae4317bf74e6d1d93e463a"}'></script><!-- End Cloudflare Web Analytics -->
+    </head>
+
+    <body onload="loadPost()">
+        <div id="maincontent">
+            <div id="topbar">
+                <p id="sitename">McTechDev</p>
+                <nav id="topnav">
+                    <a href="index.html?b=no"><button id="navbtn">[Home]</button></a>
+                    <a href="/blog.html"><button id="navbtn">[Blog]</button></a>
+                    <a href="/old/index_old.html"><button id="navbtn">[Old Site]</button></a>
+                </nav>
+            </div>
+    
+            <div id="projcontainer" style="margin-top: 70px;">
+                <div id="topinfo">
+                    <div>
+                        <h1 id="posttitle"></h1>
+                        <p id="postdate"></p>
+                    </div>
+                    <div id="postLinks">
+                        <a href="" id="previouslink"><button id="sitebtn">[Previous post]</button></a>
+                        <a href="" id="nextlink"><button id="sitebtn">[Next post]</button></a>
+                    </div>
+                </div>
+                <hr style="border-color: red;">
+                <div id="postContent"></div>
+            </div>
+        </div>
+
+        <!--<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="mctechdev" data-description="Support me on Buy me a coffee!" data-message="Hey, could you maybe support me? :3" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>-->
+        <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+        <script>
+            function loadPost() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const pname = urlParams.get("p");
+
+                const xmlUrl = '/posts.xml';
+
+                fetch(xmlUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(xmlString => {
+                    parseXML(xmlString);
+                })
+                .catch(error => {
+                    console.error('There was a problem fetching the XML file:', error);
+                    alert('There was a problem fetching the post data:', error);
+                });
+
+                function parseXML(xmlString) {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(xmlString, 'application/xml');
+
+                    const posts = xmlDoc.getElementsByTagName('post');
+                    const parsedposts = [];
+
+                    const post = posts[parseInt(pname)];
+                    const title = post.getElementsByTagName('title')[0].textContent;
+                    const date = post.getElementsByTagName('date')[0].textContent;
+
+                    document.getElementById("posttitle").textContent = title;
+                    document.getElementById("postdate").textContent = date;
+
+                    if (posts[parseInt(pname) - 1]) {
+                        document.getElementById("previouslink").href = `/post.html?p=${parseInt(pname) - 1}`;
+                    } else {
+                        document.getElementById("previouslink").style.display = "none";
+                    }
+
+                    if (posts[parseInt(pname) + 1]) {
+                        document.getElementById("nextlink").href = `/post.html?p=${parseInt(pname) + 1}`;
+                    } else {
+                        document.getElementById("nextlink").style.display = "none";
+                    }
+
+                    const postUrl = `/posts/${title}.md`;
+
+                    fetch(postUrl)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(md => {
+                        document.getElementById("postContent").innerHTML = marked.parse(md);
+                    })
+                    .catch(err => {
+                        document.getElementById("postContent").innerHTML = `<p style="color:red;">Error loading post file: ${err}</p>`;
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>
