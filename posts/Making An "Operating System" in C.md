@@ -12,5 +12,14 @@ He did this by making a UEFI app that can be booted from almost any PC, which ma
 
 This took an UNNECESSARY amount of time to get working, mostly because I was very new to compiling C for UEFI. I already know a bit of C from Arduino programming, and I can also adapt the syntax and what I've learned from other coding languages to this.
 <br/>
-C wasn't my problem, though. I had asked ChatGPT to make me a simple C template for a UEFI app, and also a simple makefile that would build it. I ran
 <br/>
+C wasn't my problem, though. I had asked ChatGPT to make me a simple C template for a UEFI app, and also a simple makefile that would build it. I ran `make`, and was not really surprised by the results.
+<br/>
+There were a bunch of library errors, and I gave them to ChatGPT since I knew basically NOTHING about UEFI libraries. Little did I know, this would get much, MUCH worse.
+<br/>
+<br/>
+*Cue Hall of the Mountain King...*
+<br/>
+<br/>
+*8:00 PM*
+"Oh, it gave me some errors, I'll just give them to"
