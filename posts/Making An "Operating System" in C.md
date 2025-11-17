@@ -21,5 +21,45 @@ There were a bunch of library errors, and I gave them to ChatGPT since I knew ba
 *Cue Hall of the Mountain King...*
 <br/>
 <br/>
+
 *8:00 PM*
-"Oh, it gave me some errors, I'll just give them to"
+<br/>
+"Oh, it gave me some errors, I'll just give them to ChatGPT!"
+<br/>
+<br/>
+*9:00 PM*
+<br/>
+"OKAY, THIS IS GETTING REALLY ANNOYING, CHATGPT IS JUST MAKING MORE PROBLEMS, SO I'M JUST GOING TO START OVER!"
+<br/>
+(I spun up a new instance of CGPT and had it redo it from scratch, and it gave me a different compilation method using gnu-efi instead.)
+<br/>
+<br/>
+*10:00 PM*
+<br/>
+(ChatGPT still is giving me problematic code)
+<br/>
+"I'M SO TIRED OF THIS RIGHT NOW!!!"
+<br/>
+<br/>
+
+Basically what happened was that it first gave me a makefile to compile it with, then it used edk2, which was A LOT of configuration that didn't end up working, and THEN it switched to gnu-efi, where I actually got a TINY bit of hope!
+<br/>
+After this whole three-hour saga of getting absolutely NOWHERE, I decided to go to bed.
+
+<br/>
+<br/>
+
+### The Next Day
+
+I kept contemplating whether I should continue or not, but I finally decided that I should, and that I would be REALLY proud of myself when I got it to work.
+<br/>
+I spun up yet ANOTHER instance of CGPT, this time on Windows. It told me the build process, and I got to the installation of Visual Studio when I realized that I should just keep using Linux, as it would be MUCH less trouble.
+<br/>
+<br/>
+
+I kept googling how to do this, and I finally stumbled across a [blog post]()! It was a post on how to make a simple text AND gui UEFI app, which was EXACTLY what I wanted! There was a link to the [GitHub]() with examples, and I was EXTREMELY relieved.
+<br/>
+<br/>
+I wrote one of the examples to a flash drive, spun it up in QEMU, and lo and behold, it worked!
+<br/>
+From there, I 
