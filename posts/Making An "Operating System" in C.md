@@ -57,7 +57,7 @@ I spun up yet ANOTHER instance of CGPT, this time on Windows. It told me the bui
 <br/>
 <br/>
 
-I kept googling how to do this, and I finally stumbled across a [blog post]()! It was a post on how to make a simple text AND gui UEFI app, which was EXACTLY what I wanted! There was a link to the [GitHub]() with examples, and I was EXTREMELY relieved.
+I kept googling how to do this, and I finally stumbled across a [blog post](https://www.baeldung.com/cs/uefi-bare-metal-program-development)! It was a post on how to make a simple text AND gui UEFI app, which was EXACTLY what I wanted! There was a link to the [GitHub](https://github.com/Baeldung/posts-resources/tree/main/cs-articles/bare-metal-program-with-uEFI-no-os-required) with examples, and I was EXTREMELY relieved.
 <br/>
 <br/>
 I wrote one of the examples to a flash drive, spun it up in QEMU, and lo and behold, it worked!
