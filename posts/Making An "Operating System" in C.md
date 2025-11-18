@@ -62,7 +62,9 @@ I kept googling how to do this, and I finally stumbled across a [blog post]()! I
 <br/>
 I wrote one of the examples to a flash drive, spun it up in QEMU, and lo and behold, it worked!
 <br/>
-From there, I just added a couple more functions such as a very simple text editor and donut.c (kind of).
+From there, I just added a prompt and a couple more functions such as a very simple text editor and donut.c (kind of).
+<br/>
+I had to use Ventoy to boot the EFI on my Mac, which wasn't a problem.
 <br/>
 <br/>
 <br/>
