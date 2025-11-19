@@ -62,13 +62,17 @@ I kept googling how to do this, and I finally stumbled across a [blog post](http
 <br/>
 I wrote one of the examples to a flash drive, spun it up in QEMU, and lo and behold, it worked!
 <br/>
+<br/>
 From there, I just added a prompt and a couple more functions such as a very simple text editor and donut.c (kind of).
+<br/>
+<br/>
+![IMG_0084](https://github.com/user-attachments/assets/6b94109d-6d8d-47f4-8b37-32d9debedf80)
+<br/>
 <br/>
 I had to use Ventoy to boot the EFI on my Mac, which wasn't a problem.
 <br/>
 <br/>
 <br/>
 As of writing this, McTechOS is just a simple little console UEFI app, but I may build an actual full and small operating system out of it!
-</br>
 </br>
 The code will be avalible on my GitHub sometime soon :3
