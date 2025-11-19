@@ -4,4 +4,10 @@
         <date>Tuesday, November 11</date>
         <img>https://static0.howtogeekimages.com/wordpress/wp-content/uploads/2019/12/markdown-logo-on-a-blue-background.png</img>
     </post>
+
+    <post>
+        <title>Making An "Operating System" in C</title>
+        <date>Monday, November 17</date>
+        <img>https://github.com/user-attachments/assets/6b94109d-6d8d-47f4-8b37-32d9debedf80</img>
+    </post>
 </posts>
