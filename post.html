@@ -66,38 +66,44 @@
                     const posts = xmlDoc.getElementsByTagName('post');
                     const parsedposts = [];
 
-                    const post = posts[parseInt(pname)];
-                    const title = post.getElementsByTagName('title')[0].textContent;
-                    const date = post.getElementsByTagName('date')[0].textContent;
+                    for (let i = 0; i < posts.length; i++) {
+                        const curpost = posts[i];
+                        const title = curpost.getElementsByTagName('title')[0].textContent;
+                        const date = curpost.getElementsByTagName('date')[0].textContent;
 
-                    document.getElementById("posttitle").textContent = title;
-                    document.getElementById("postdate").textContent = date;
+                        if (title === pname) {
+                            document.getElementById("posttitle").textContent = title;
+                            document.getElementById("postdate").textContent = date;
 
-                    if (posts[parseInt(pname) - 1]) {
-                        document.getElementById("previouslink").href = `/post.html?p=${parseInt(pname) - 1}`;
-                    } else {
-                        document.getElementById("previouslink").style.display = "none";
+                            if (posts[parseInt(pname) - 1]) {
+                                document.getElementById("previouslink").href = `/post.html?p=${parseInt(pname) - 1}`;
+                            } else {
+                                document.getElementById("previouslink").style.display = "none";
+                            }
+
+                            if (posts[parseInt(pname) + 1]) {
+                                document.getElementById("nextlink").href = `/post.html?p=${parseInt(pname) + 1}`;
+                            } else {
+                                document.getElementById("nextlink").style.display = "none";
+                            }
+
+                            const postUrl = `/posts/${title}.md`;
+
+                            fetch(postUrl)
+                            .then(response => {
+                                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                                return response.text();
+                            })
+                            .then(md => {
+                                document.getElementById("postContent").innerHTML = marked.parse(md);
+                            })
+                            .catch(err => {
+                                document.getElementById("postContent").innerHTML = `<p style="color:red;">Error loading post file: ${err}</p>`;
+                            });
+                        }
                     }
 
-                    if (posts[parseInt(pname) + 1]) {
-                        document.getElementById("nextlink").href = `/post.html?p=${parseInt(pname) + 1}`;
-                    } else {
-                        document.getElementById("nextlink").style.display = "none";
-                    }
-
-                    const postUrl = `/posts/${title}.md`;
-
-                    fetch(postUrl)
-                    .then(response => {
-                        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-                        return response.text();
-                    })
-                    .then(md => {
-                        document.getElementById("postContent").innerHTML = marked.parse(md);
-                    })
-                    .catch(err => {
-                        document.getElementById("postContent").innerHTML = `<p style="color:red;">Error loading post file: ${err}</p>`;
-                    });
+                    //const post = posts[parseInt(pname)];
                 }
             }
         </script>
