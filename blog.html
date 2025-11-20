@@ -64,7 +64,7 @@
                         const date = post.getElementsByTagName('date')[0].textContent;
                         const img = post.getElementsByTagName('img')[0].textContent;
 
-                        addProjectBtn([ title, date, title, img ]);
+                        addProjectBtn([ title, date, title, img, i ]);
                     }
                 }
             }
@@ -74,6 +74,7 @@
                 const btnDate = projectItems[1];
                 const btnLink = projectItems[2];
                 const btnImg = projectItems[3];
+                const postIndex = projectItems[4];
 
                 const link = document.createElement('a');
                 link.href = `/post.html?p=${btnLink}`;
@@ -97,7 +98,7 @@
 
                 link.appendChild(btn);
 
-                if (btnLink === 0) {
+                if (postIndex === 0) {
                     btn.style.width = "100%";
                     btn.style.height = "100%";
                     btn.style.aspectRatio = "16/9";
