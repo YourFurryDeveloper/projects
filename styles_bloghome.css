@@ -122,6 +122,13 @@ html::-webkit-scrollbar-thumb {
     right: 150px;
 }
 
+@media (max-width: 600px) {
+    #mainprojholder {
+        left: 0 !important;
+        right: 0 !important;
+    }
+}
+
 #postLink {
     margin-left: 20px;
     margin-right: 20px;
