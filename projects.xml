@@ -1,6 +1,6 @@
 <projects>
     <project>
-        <img>/img/projects/retrochat.png</img>
+        <img>img/projects/retrochat.png</img>
         <name>Retro Chat</name>
         <urlname>retrochat</urlname>
         <descshort>A really cool and simple retro chat site!</descshort>
@@ -10,7 +10,7 @@
     </project>
 
     <project>
-        <img>/img/projects/rpsai.png</img>
+        <img>img/projects/rpsai.png</img>
         <name>RPS AI</name>
         <urlname>rpsai</urlname>
         <descshort>A very simple Rock, Paper, Scissors AI vs AI written in Python</descshort>
@@ -24,7 +24,7 @@
     </project>
 
     <project>
-        <img>/img/projects/flow.png</img>
+        <img>img/projects/flow.png</img>
         <name>Flow</name>
         <urlname>flowanim</urlname>
         <descshort>A cool little web animator</descshort>
@@ -34,7 +34,7 @@
     </project>
 
     <project>
-        <img>/img/projects/freevector.png</img>
+        <img>img/projects/freevector.png</img>
         <name>FreeVector</name>
         <urlname>freevector</urlname>
         <descshort>A simple and free SVG program</descshort>
@@ -44,7 +44,7 @@
     </project>
 
     <project>
-        <img>/img/projects/discord.png</img>
+        <img>img/projects/discord.png</img>
         <name>Discord Login</name>
         <urlname>dsclogin</urlname>
         <descshort>A recreation of the Discord login page</descshort>
@@ -56,7 +56,7 @@ lol</desc>
     </project>
 
     <project>
-        <img>/img/projects/replwebz.png</img>
+        <img>img/projects/replwebz.png</img>
         <name>ReplWebz</name>
         <urlname>replwebz</urlname>
         <descshort>A mock Internet</descshort>
@@ -66,7 +66,7 @@ lol</desc>
     </project>
 
     <project>
-        <img>/img/projects/oreo.png</img>
+        <img>img/projects/oreo.png</img>
         <name>Oreo Generator</name>
         <urlname>orereo</urlname>
         <descshort>Pretty self-explanatory lol</descshort>
@@ -76,7 +76,7 @@ lol</desc>
     </project>
 
     <project>
-        <img>/img/projects/infinitelibrary.png</img>
+        <img>img/projects/infinitelibrary.png</img>
         <name>The Infinite Library</name>
         <urlname>infinitelibrary</urlname>
         <descshort>An odd-feeling liminal space</descshort>
@@ -86,7 +86,7 @@ lol</desc>
     </project>
 
     <project>
-        <img>/img/projects/tubermash.png</img>
+        <img>img/projects/tubermash.png</img>
         <name>TuberMash</name>
         <urlname>tubermash</urlname>
         <descshort>Like FaceMash, but with YouTubers!</descshort>
@@ -96,7 +96,7 @@ lol</desc>
     </project>
 
     <project>
-        <img>/img/projects/ninjatimer.png</img>
+        <img>img/projects/ninjatimer.png</img>
         <name>McTech Ninja Timing System</name>
         <urlname>mtns</urlname>
         <descshort>A cool recreation of the ninja timing and leaderboard system I made just for fun in 2 days while at Worlds!</descshort>
@@ -106,7 +106,7 @@ lol</desc>
     </project>
 
     <project>
-        <img>/img/projects/EasyToolbar.js.svg</img>
+        <img>img/projects/EasyToolbar.js.svg</img>
         <name>EasyToolbar.js</name>
         <urlname>etbjs</urlname>
         <descshort>A Javascript library for HTML editor webapps or whatever you want!</descshort>
@@ -116,7 +116,7 @@ lol</desc>
     </project>
 
     <project>
-        <img>/img/projects/3d-png-renderer.png</img>
+        <img>img/projects/3d-png-renderer.png</img>
         <name>3D PNG Renderer</name>
         <urlname>3dpngr</urlname>
         <descshort>A really, really cool PNG/GIF/any image 3D renderer! </descshort>
