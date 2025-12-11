@@ -76,18 +76,18 @@
                             document.getElementById("postdate").textContent = date;
 
                             if (posts[parseInt(pname) - 1]) {
-                                document.getElementById("previouslink").href = `/post.html?p=${parseInt(pname) - 1}`;
+                                document.getElementById("previouslink").href = `post.html?p=${parseInt(pname) - 1}`;
                             } else {
                                 document.getElementById("previouslink").style.display = "none";
                             }
 
                             if (posts[parseInt(pname) + 1]) {
-                                document.getElementById("nextlink").href = `/post.html?p=${parseInt(pname) + 1}`;
+                                document.getElementById("nextlink").href = `post.html?p=${parseInt(pname) + 1}`;
                             } else {
                                 document.getElementById("nextlink").style.display = "none";
                             }
 
-                            const postUrl = `/posts/${title}.md`;
+                            const postUrl = `posts/${title}.md`;
 
                             fetch(postUrl)
                             .then(response => {
