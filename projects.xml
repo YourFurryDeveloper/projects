@@ -124,4 +124,14 @@ lol</desc>
         <ghub shown="yes">https://github.com/YourFurryDeveloper/3D-PNG-Renderer</ghub>
         <site shown="yes">https://yourfurrydeveloper.github.io/3D-PNG-Renderer</site>
     </project>
+
+    <project>
+        <img>img/projects/virtual-ham-radio.png</img>
+        <name>VHam Radio</name>
+        <urlname>vham</urlname>
+        <descshort>A virtual ham radio for hams to train and practice with, for hams without a license yet, and for anyone who just wants to play around without getting in trouble with the FCC :3</descshort>
+        <desc>As of writing this description, I am studying for and finding a place to take an FCC technician class license exam. I have been building up knowledge of ham radio, and am VERY excited to recieve my license! In the meantime, I made this just for fun, but also for anyone to play around with! I can see it having a lot of use cases, but one of the biggest is probably for hams to practice copying, radio ettiquite, and whatnot without actually going on the air.</desc>
+        <ghub shown="no"></ghub>
+        <site shown="yes">https://virtual-ham-radio.onrender.com/</site>
+    </project>
 </projects>
