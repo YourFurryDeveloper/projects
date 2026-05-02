@@ -122,13 +122,6 @@ html::-webkit-scrollbar-thumb {
     right: 150px;
 }
 
-@media (max-width: 600px) {
-    #mainprojholder {
-        left: 0 !important;
-        right: 0 !important;
-    }
-}
-
 #postLink {
     margin-left: 20px;
     margin-right: 20px;
@@ -138,6 +131,17 @@ html::-webkit-scrollbar-thumb {
     flex-direction: column;
     align-items: center;
     height: fit-content;*/
+}
+
+@media (max-width: 600px) {
+    #mainprojholder {
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    #postLink {
+        margin-left: 0px !important;
+    }
 }
 
 @media screen and not (max-width: 900px) {
@@ -165,6 +169,7 @@ html::-webkit-scrollbar-thumb {
     /*width: calc(100vw / 6);*/
     /*height: calc(100vw / 6);*/
     transition: 0.2s;
+    box-sizing: border-box;
     cursor: pointer;
     box-shadow: 10px 10px 0px 4px rgba(99,99,99,0.57);
     /*flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
