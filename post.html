@@ -25,18 +25,38 @@
                         <h1 id="posttitle"></h1>
                         <p id="postdate"></p>
                     </div>
+                </div>
+                <hr style="border-color: red;">
+                <div id="postContent"></div>
+                <div id="postFooter">
                     <div id="postLinks">
                         <a href="" id="previouslink"><button id="sitebtn">[Previous post]</button></a>
                         <a href="" id="nextlink"><button id="sitebtn">[Next post]</button></a>
                     </div>
+
+                    <h1 style="color: white; margin-top: 30px;">Comments</h1>
+                    <div class="giscus"></div>
                 </div>
-                <hr style="border-color: red;">
-                <div id="postContent"></div>
             </div>
         </div>
 
+        <script src="https://giscus.app/client.js"
+                data-repo="yourfurrydeveloper/projects"
+                data-repo-id="R_kgDOOVo83w"
+                data-category="Blog"
+                data-category-id="DIC_kwDOOVo8384CrCXL"
+                data-mapping="url"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-theme="noborder_dark"
+                data-lang="en"
+                crossorigin="anonymous"
+                async>
+        </script>
         <!--<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="mctechdev" data-description="Support me on Buy me a coffee!" data-message="Hey, could you maybe support me? :3" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>-->
-        <script src="https://cdn.jsdelivr.net/npm/marked/lib/marked.umd.js"></script>
+        <script src="/static/marked.umd.js"></script>
         <script>
             function loadPost() {
                 const urlParams = new URLSearchParams(window.location.search);
@@ -75,16 +95,16 @@
                             document.getElementById("posttitle").textContent = title;
                             document.getElementById("postdate").textContent = date;
 
-                            if (posts[parseInt(pname) - 1]) {
-                                document.getElementById("previouslink").href = `post.html?p=${parseInt(pname) - 1}`;
-                            } else {
-                                document.getElementById("previouslink").style.display = "none";
-                            }
-
-                            if (posts[parseInt(pname) + 1]) {
-                                document.getElementById("nextlink").href = `post.html?p=${parseInt(pname) + 1}`;
+                            if (posts[i - 1]) {
+                                document.getElementById("nextlink").href = `post.html?p=${posts[i - 1].getElementsByTagName("title")[0].textContent}`;
                             } else {
                                 document.getElementById("nextlink").style.display = "none";
+                            }
+
+                            if (posts[i + 1]) {
+                                document.getElementById("previouslink").href = `post.html?p=${posts[i + 1].getElementsByTagName("title")[0].textContent}`;
+                            } else {
+                                document.getElementById("previouslink").style.display = "none";
                             }
 
                             const postUrl = `posts/${title}.md`;

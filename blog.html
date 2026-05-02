@@ -88,6 +88,9 @@
                     background-position: center;
                 `;
 
+                const postInfoContainer = document.createElement("div");
+                postInfoContainer.style = "display: flex; flex-direction: column; justify-content: center; align-items: center;"
+
                 const caption = document.createElement('p');
                 caption.id = 'projcaption';
                 caption.textContent = btnName;
@@ -99,14 +102,15 @@
                 link.appendChild(btn);
 
                 if (postIndex === 0) {
-                    btn.style.width = "100%";
-                    btn.style.height = "100%";
-                    btn.style.aspectRatio = "16/9";
+                    //btn.style.width = "100%";
+                    //btn.style.height = "100%";
+                    //btn.style.aspectRatio = "16 / 9";
                     link.className = "latestPost";
                 }
 
-                link.appendChild(caption);
-                link.appendChild(dateCaption);
+                postInfoContainer.appendChild(caption);
+                postInfoContainer.appendChild(dateCaption);
+                link.appendChild(postInfoContainer);
 
                 const container = document.getElementById('mainprojholder');
                 if (container) {

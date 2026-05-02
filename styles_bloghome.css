@@ -134,13 +134,33 @@ html::-webkit-scrollbar-thumb {
     margin-right: 20px;
     margin-bottom: 20px;
     width: 300px;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;*/
+}
+
+@media screen and not (max-width: 900px) {
+    .latestPost {
+        width: 90% !important;
+        margin-bottom: 80px !important;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .latestPost #projbtn {
+        margin-right: 30px;
+    }
 }
 
 #projbtn {
     margin-top: 25px;
     /*size-adjust: initial;*/
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /*height: 300px;*/
     /*flex: 1 1 300px;*/
     /*width: calc(100vw / 6);*/
     /*height: calc(100vw / 6);*/
@@ -150,20 +170,12 @@ html::-webkit-scrollbar-thumb {
     /*flex: 1 1 200px; /* flex-grow: 1, flex-shrink: 1, flex-basis: 200px */
     
     flex: 1;
-    min-width: 200px;
+    /*min-width: 200px;*/
 }
 
 #projbtn:hover {
     box-shadow: 10px 10px 0px 4px rgba(109, 152, 159, 0.57);
     transform: scale(101%);
-}
-
-.latestPost {
-    width: 100% !important;
-    height: 500px;
-    margin-bottom: 150px !important;
-    margin-left: 0px !important;
-    margin-right: 0px !important;
 }
 
 #projcaption {
