@@ -90,6 +90,7 @@
                         const curpost = posts[i];
                         const title = curpost.getElementsByTagName('title')[0].textContent;
                         const date = curpost.getElementsByTagName('date')[0].textContent;
+                        const postImg = curpost.getElementsByTagName('img')[0].textContent;
 
                         if (title === pname) {
                             document.getElementById("posttitle").textContent = title;
@@ -120,6 +121,12 @@
                             .catch(err => {
                                 document.getElementById("postContent").innerHTML = `<p style="color:red;">Error loading post file: ${err}</p>`;
                             });
+
+                            var imgMeta = document.createElement('meta');
+                            imgMeta.setAttribute("property", "og:image");
+                            imgMeta.setAttribute("content", postImg);
+                            document.head.appendChild(imgMeta);
+
                         }
                     }
 
