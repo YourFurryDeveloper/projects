@@ -4,8 +4,10 @@ ___
 
 [The video that this writeup follows](https://youtube.com/watch?v=5JHK97y1LY8)
 
+[](previewstart)
 Lately, I've really been getting into making a cool smart home with Homeassistant. I've been taking inspiration from The Stock Pot's videos, and actually recently made a cool wall-mounted dashboard!
 <br>I've been itching to add cool things to my smart home, so when I saw a cheap moon lamp that I had lying around, I thought, "hey, it would be really cool if I could make that smart!" So I did... lol
+[](previewend)
 
 <br>
 

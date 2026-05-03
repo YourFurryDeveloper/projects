@@ -27,7 +27,8 @@
         </div>
 
         <!--<script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="mctechdev" data-description="Support me on Buy me a coffee!" data-message="Hey, could you maybe support me? :3" data-color="#BD5FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>-->
-
+        
+        <script src="static/marked.umd.js"></script>
         <script>
             function loadPosts() {
                 const urlParams = new URLSearchParams(window.location.search);
@@ -89,7 +90,7 @@
                 `;
 
                 const postInfoContainer = document.createElement("div");
-                postInfoContainer.style = "display: flex; flex-direction: column; justify-content: center; align-items: center;"
+                postInfoContainer.style = "display: flex; flex-direction: column; justify-content: center; align-items: center; flex: 1;"
 
                 const caption = document.createElement('p');
                 caption.id = 'projcaption';
@@ -100,16 +101,38 @@
                 dateCaption.textContent = btnDate;
 
                 link.appendChild(btn);
+                postInfoContainer.appendChild(caption);
+                postInfoContainer.appendChild(dateCaption);
 
                 if (postIndex === 0) {
                     //btn.style.width = "100%";
                     //btn.style.height = "100%";
                     //btn.style.aspectRatio = "16 / 9";
+                    const postUrl = `posts/${btnName}.md`;
+
+                    const postPreview = document.createElement("p");
+                    postPreview.id = "postpreview";
+
+                    fetch(postUrl)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+                        return response.text();
+                    })
+                    .then(md => {
+                        previewStart = md.indexOf("[](previewstart)");
+                        previewEnd = md.indexOf("[](previewend)");
+                        md = md.slice(previewStart, previewEnd);
+                        postPreview.innerHTML = marked.parse(md);
+                    })
+                    .catch(err => {
+                        postPreview.innerHTML = `<p style="color:red;">Error loading post file: ${err}</p>`;
+                    });
+
+                    postInfoContainer.append(postPreview);
+
                     link.className = "latestPost";
                 }
 
-                postInfoContainer.appendChild(caption);
-                postInfoContainer.appendChild(dateCaption);
                 link.appendChild(postInfoContainer);
 
                 const container = document.getElementById('mainprojholder');
