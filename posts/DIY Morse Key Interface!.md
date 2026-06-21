@@ -20,15 +20,15 @@ All I needed to do was transmit to my computer when a paddle was pressed and rel
 Grab your three wires and solder each of them to the pins that correspond to your 3.5mm jack's tip, ring, and sleeve. If you don't know the pinout of your jack, just use a multimeter on continuity mode with a 3.5mm cable attatched.
 <br>
 
-![TRS Diagram](/img/blog/morse_trs.png)
+![TRS Diagram](/projects/img/blog/morse_trs.png)
 
 Wire the sleeve up to your microcontroller's gnd. If you are using a Micro:bit, wire the tip to pin 1, and the ring to pin 2. If you are using an Arduino, wire the tip to digital pin 2 and the ring to digital pin 3. Now is the time for me to mention that I use a reversed key where the left is dah and right is dit, so I have programmed the microcontroller accordingly. You can just reverse these in wiring.
 <br>
 Here's what mine looks like:
 <br>
 
-![Micro:bit Top](/img/blog/morse_microbit1.jpeg)
-![Micro:bit Side](/img/blog/morse_microbit2.jpeg)
+![Micro:bit Top](/projects/img/blog/morse_microbit1.jpeg)
+![Micro:bit Side](/projects/img/blog/morse_microbit2.jpeg)
 
 Now that you're all set, you can flash your microcontroller and start using it on your computer! To use it on your computer, you just need to download the Python script that I made. The way it works is it reads the serial monitor for the messages that say which paddle was pressed/released. It then presses the specified keyboard key that correlates to the paddle.
 <br>

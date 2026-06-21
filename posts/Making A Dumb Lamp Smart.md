@@ -15,7 +15,7 @@ Lately, I've really been getting into making a cool smart home with Homeassistan
 
 The first thing I did to the lamp was (obviously) take the lamp apart. It was very simple, just a little round insert with LEDs and a battery compartment.
 
-![Lamp Insert](/img/blog/lamp1.png)
+![Lamp Insert](/projects/img/blog/lamp1.png)
 
 My original plan had been to hard-wire an ESP32 to the IR reciever input on the LED board and then send codes, but the IR circuit didn't want to work for some reason.
 <br>The lamp did have a button that cycles through all the modes and colors though, so I decided to use that.
@@ -26,14 +26,14 @@ My original plan had been to hard-wire an ESP32 to the IR reciever input on the 
 
 I decided to put a transistor between the two pads of the button so that I could feed a signal from a pin on the ESP32 to press it.
 
-![Transistor Button](/img/blog/lamp2.png)
+![Transistor Button](/projects/img/blog/lamp2.png)
 
 I would make the ESP32 "press" the button a specific amount of times to get to a specific color/mode. But for this to work, I needed to painstakingly record every mode on the lamp, along with the number of button presses they are from the "off" mode (what the lamp starts on).
 <br>
 
 Once I had finished soldering the transistor on, I soldered the ESP32 to the transistor and light power terminals. I was using an ESP32-WROVER on an Elegoo cam-v1.5 board from their smart car kit, so I was really only able to use TX0, which wasn't a huge problem.
 
-![ESP32 Wiring](/img/blog/lamp3.png)
+![ESP32 Wiring](/projects/img/blog/lamp3.png)
 
 I did a bit of a sloppy job adding the ESP32 to the structure, as I just used hot glue to keep it in since it realistically wouldn't be visible during normal use.
 
